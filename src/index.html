@@ -4,9 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
     <title>TODO APP</title>
+
+    <style>
+      body {
+        font: caption;
+      }
+      h1 {
+      }
+      .list-group-item a {
+        color: #dc3545 !important;
+      }
+    </style>
   </head>
   <body>
-    <h1>TODO</h1>
+    <div class="container">
+      <h1 class="text-muted text-center my-3">To-Do <small>List</small></h1>
+      <button class="btn btn-outline-primary">Create New Todo</button>
+    </div>
+
+    <ul class="todo list-group container mt-3">
+      <li class="list-group-item ">
+        Hello world<a class="float-right text-muted close">&times;</a>
+      </li>
+      <li class="list-group-item ">
+        Hello world<a class="float-right text-muted close">&times;</a>
+      </li>
+    </ul>
+    <script src="index.js"></script>
   </body>
 </html>
