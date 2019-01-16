@@ -3,7 +3,8 @@ const { BrowserWindow } = require("electron");
 //default BrowserWindow size
 const defaultProps = {
   width: 800,
-  height: 500
+  height: 500,
+  show: false
 };
 
 class Window extends BrowserWindow {
@@ -11,6 +12,8 @@ class Window extends BrowserWindow {
     super({ ...defaultProps, ...windowSettings });
 
     this.loadURL(`file://${file}`);
+
+    this.once("ready-to-show", () => this.show());
   }
 }
 
